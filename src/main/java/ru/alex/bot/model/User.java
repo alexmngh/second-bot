@@ -2,9 +2,9 @@ package ru.alex.bot.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
+import javax.persistence.Id;
 
 @Entity
 @Getter
@@ -18,6 +18,10 @@ public class User {
   // текущее состояние бота
   private Integer stateId;
   private String name;
+  private Boolean admin;
+  // Пользователь которому следует отправялть информацию
+  private Boolean sendInfo = true;
+//  private Boolean sendInfo = false;
 
   public User() {
   }
